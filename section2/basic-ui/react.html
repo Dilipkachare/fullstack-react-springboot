@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+
+    <script src="./react-lib/react.development.js"></script>
+    <script src="./react-lib/react-dom.development.js"></script>
+
+    <div id="root"></div>
+
+    <script>
+        // Generate a random number between 1 and 100
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        // Create the h1 heading displaying the number
+        const heading = React.createElement(
+            "h1", 
+            null, 
+            `Generated Number: ${randomNumber}`
+        );
+
+        // Check if the number is even or odd and create an h2 element
+        const result = React.createElement(
+            "h2", 
+            null, 
+            randomNumber % 2 === 0 ? "The number is even!" : "The number is odd!"
+        );
+
+        // Target the "root" div and render the elements inside a parent div
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(
+            React.createElement("div", null, [heading, result])
+        );
+    </script>
+
+</body>
+</html>
