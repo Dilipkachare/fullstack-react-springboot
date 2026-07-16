@@ -13,7 +13,7 @@ export default function Footer() {
       />
       by
       <a href="https://dilipkachare.netlify.app/" target="_blank" rel="noreferrer">
-        Dilip
+        Dilip K
       </a>
     </footer>
   );
