@@ -3,6 +3,7 @@ import { faShoppingBasket, faTags } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
+    
     <header className="header">
       <div className="container">
         <a href="/" className="link">
