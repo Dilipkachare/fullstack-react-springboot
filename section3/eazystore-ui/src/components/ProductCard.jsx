@@ -1,4 +1,3 @@
-import React from "react";
 import Price from "./Price";
 
 export default function ProductCard({ product }) {
@@ -16,7 +15,7 @@ export default function ProductCard({ product }) {
         <p className="product-card-description">{product.description}</p>
         <div className="product-card-footer">
           <div className="product-card-price">
-            <Price currency="$" price={product.price} />
+            <Price currency="₹" price={product.price} />
           </div>
         </div>
       </div>
