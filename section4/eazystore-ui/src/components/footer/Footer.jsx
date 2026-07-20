@@ -2,18 +2,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 //import "./footer.css";
 import styles from "./footer.module.css";
+import styled from "styled-components";
+import EazyButton from "../EazyButton";
+
+const H1=styled.h1`
+color: #5B21B6;
+text-align: center;
+`;
 
 export default function Footer() {
   const isActive = Math.random() > 0.5;
   return (
     <>
-     <h1
+    <H1>
+      Welcome to Eazy Store!
+    </H1>
+    <EazyButton $primary>submit</EazyButton>
+    {/* <h1
         className={`${styles["my-heading"]} ${
           isActive ? styles["primary-color"] : styles["secondary-color"]
         }`}
       >
      demo of global scope from footer
       </h1>
+      */}
    {/*<h1 style={{
     textAlign: "center",
     color: isActive ? "#333" : "#5B21B6"
@@ -27,7 +39,7 @@ export default function Footer() {
       Buit with
       <FontAwesomeIcon
         icon={faHeart}
-        className={styles["heart-icon"]}
+        className={styles["footer-icon"]}
         aria-hidden="true"
       />
       by
