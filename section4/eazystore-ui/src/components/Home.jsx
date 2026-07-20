@@ -1,9 +1,30 @@
 import products from "../data/products";
 import PageHeading from "./PageHeading";
 import ProductListings from "./ProductListings";
+import "./footer/footer.css";
+
+
 
 export default function Home() {
+  const isActive = Math.random() > 0.5;
+
+  const h1styles = {
+    textAlign: "center",
+    color: isActive ? "black" : "red"
+    
+  };
+
   return (
+    <>
+      <h1
+        className={`my-heading ${
+          isActive ? "primary-color" : "secondary-color"
+        }`}
+      >
+      Welcome to Eazy Stickers!
+      </h1>
+   {/* <h1 style={h1styles}>Welcome to Eazy Stickers!</h1> */}
+  
     <div className="home-container">
       <PageHeading title="Explore Eazy Stickers!">
         Add a touch of creativity to your space with our wide range of fun and
@@ -11,5 +32,6 @@ export default function Home() {
       </PageHeading>
       <ProductListings products={products} />
     </div>
+    </>
   );
 }
