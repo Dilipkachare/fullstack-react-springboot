@@ -15,7 +15,7 @@ background-color: blue;
 }
 
 &:focus {
-outline: 2px solid whitre;
+outline: 2px solid white;
 }
 `;
 
