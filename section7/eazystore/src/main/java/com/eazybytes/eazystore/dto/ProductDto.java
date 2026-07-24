@@ -1,0 +1,19 @@
+package com.eazybytes.eazystore.dto;
+
+import lombok.Data;
+
+import java.math.BigDecimal;
+import java.time.Instant;
+
+@Data
+public class ProductDto {
+
+
+    private Long id;
+    private String name;
+    private String description;
+    private BigDecimal price;
+    private Integer popularity;
+    private String imageUrl;
+    private Instant createdAt;
+}
